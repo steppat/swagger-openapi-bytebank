@@ -1,0 +1,14 @@
+version: '3'
+services:
+  swagger-ui:
+    volumes:
+      - .:/mnt
+    environment:
+      SWAGGER_JSON: /mnt/bytebank-api.yaml
+    ports:
+      - "8081:8080"
+    image: "swaggerapi/swagger-ui"
+  swagger-editor:
+    ports:
+      - "8082:8080"
+    image: "swaggerapi/swagger-editor"
